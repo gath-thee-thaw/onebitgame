@@ -56,19 +56,9 @@
         <object-type name="Audio" sid="2722091819329769">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="tilemap_solid" sid="518201874306156">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="605711761698139">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\gath\Desktop\retroblade\monochrome_tilemap_transparent_packed.png" />
-            <tiles />
-        </object-type>
         <object-type name="tilemap_decorations1" sid="565985350137969">
             <plugin id="Tilemap" />
-            <texture original-source="C:\Users\gath\Desktop\retroblade\monochrome_tilemap_transparent_packed.png" />
+            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed.png" />
             <tiles />
         </object-type>
         <object-type name="obj_Player" sid="797682919753540">
@@ -233,6 +223,16 @@
         <object-type name="particle_dusttrails" sid="870523378876663">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="tilemap_solid" sid="781080026689389">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="780551417320445">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed.png" />
+            <tiles />
         </object-type>
     </object-folder>
     <families />
