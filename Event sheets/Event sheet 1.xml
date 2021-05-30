@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="759842853253314">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="997714655473691" type="obj_Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="369690335077671" type="obj_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="322229969471133" type="obj_Player">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="565281228434231" type="particle_dusttrails">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="905629104588442">
+            <conditions>
+                <condition id="-22" name="Else" sid="750374988300116" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="123616599503475" type="obj_Player">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="512472143590386" type="particle_dusttrails">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="208223827230258">
+            <conditions>
+                <condition id="2" name="Key is down" sid="707250333413190" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="669668105961150" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="604294361141082" type="obj_Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="796711304043643" type="obj_Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="225201126196056">
+            <conditions>
+                <condition id="2" name="Key is down" sid="210169541300177" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="165368605967585" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="812650183039124" type="obj_Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="598236194659131" type="obj_Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="996043622398001">
+            <conditions>
+                <condition id="2" name="Key is down" sid="958805066198438" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="270822843626264" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="745973452266778" type="obj_Player">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="783884585421458" type="obj_Player">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="590381444983444">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="895744559062597" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="513907126876718" type="overlay_light">
+                    <param id="0" name="Object">obj_Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="466289627174954">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="959481702879571" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Play (by name)" sid="548121904772725" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;rain&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">-20</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815430391861770">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="641839271490854" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="729865281593647" type="System">
+                    <param id="0" name="Object to create">obj_raindrop</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">random(WindowWidth)</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="461682434731778" type="obj_raindrop">
+                    <param id="0" name="Angle">100+random(-3,3)</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="675800963693638" type="obj_raindrop">
+                    <param id="0" name="Speed">random(600,800)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="246274864829829">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="512521763855925" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="616984788483068" type="System">
+                    <param id="0" name="Object to create">obj_raindrop</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">random(WindowWidth+100)</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="919177319039276" type="obj_raindrop">
+                    <param id="0" name="Angle">100+random(-3,3)</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="355246338477832" type="obj_raindrop">
+                    <param id="0" name="Speed">random(600,800)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="407838526778915">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="363163961669065" type="obj_raindrop">
+                    <param id="0" name="Object">tilemap_solid</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="251941210224065" type="System">
+                    <param id="0" name="Object to create">particle_raindrops</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">obj_raindrop.X</param>
+                    <param id="3" name="Y">obj_raindrop.Y - 6</param>
+                </action>
+                <action id="1" name="Set rate" sid="922191937720403" type="particle_raindrops">
+                    <param id="0" name="Rate">random(1,4)</param>
+                </action>
+                <action id="-9" name="Destroy" sid="200799882376740" type="obj_raindrop" />
+            </actions>
+        </event-block>
+        <event-block sid="272158440552836">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="211927029017813" type="obj_raindrop" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="205659979206914" type="obj_raindrop" />
+            </actions>
+        </event-block>
+        <event-block sid="641499243798207">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="559932112190567" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="941405125500543" type="overlay_blackbox_bottom">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">200</param>
+                </action>
+                <action id="-16" name="Wait" sid="965553686715551" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="376401095762869" type="overlay_blackbox_bottom">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="157678709984642">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="680405558680056" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="490554819648027" type="overlay_blackbox_top">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="802710034099903" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="501136921955527" type="overlay_blackbox_top">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">-64</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="533524358082291">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="610197425768296" type="Keyboard">
+                    <param id="0" name="Key">82</param>
+                </condition>
+                <condition id="-4" name="Is outside layout" sid="141759266812018" type="obj_Player" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="469144026607326" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="517948739878017">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="181838227197750" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="977274602162205" type="particle_dusttrails">
+                    <param id="0" name="Object">obj_Player</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="133043417910355">
+            <conditions>
+                <condition id="2" name="Key is down" sid="850410851590370" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="632603664378534">
+                    <conditions>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="246700806504178" type="obj_Player" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="363557302361442" type="obj_Player">
+                            <param id="0" name="Gravity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="443939876055004">
+            <conditions>
+                <condition id="-22" name="Else" sid="405483020636752" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="5" name="Set gravity" sid="529188330417977" type="obj_Player">
+                    <param id="0" name="Gravity">1500</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
