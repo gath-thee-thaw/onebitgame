@@ -10,8 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Layout 1</layout>
-        <event-sheet active="1" order="2">Event sheet 1</event-sheet>
+        <layout active="1" order="0">Layout 1</layout>
+        <event-sheet order="1">GameController</event-sheet>
+        <event-sheet order="2">Player</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -34,8 +35,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/overlay_blackbox_bottom/" />
         <folder expanded="1" path="animation-folder/overlay_blackbox_top/" />
         <folder expanded="1" path="animation-folder/obj_star/" />
-        <folder expanded="1" path="animation-folder/Enemy_fly1/" />
-        <folder expanded="1" path="animation-folder/Enemy_fly2/" />
-        <folder expanded="1" path="animation-folder/Enemy_float_indestrucable/" />
+        <folder expanded="1" path="animation-folder/obj_enemy_flyupdwon/" />
+        <folder expanded="1" path="animation-folder/obj_enemy_fly2/" />
+        <folder expanded="1" path="animation-folder/obj_enemy_indistructible/" />
     </folders-expanded>
 </c2uistate>

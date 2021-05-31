@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameController</name>
+    <events>
+        <include>Player</include>
+        <event-block sid="590381444983444">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="895744559062597" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="513907126876718" type="overlay_light">
+                    <param id="0" name="Object">obj_Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="641499243798207">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="559932112190567" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="941405125500543" type="overlay_blackbox_bottom">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">200</param>
+                </action>
+                <action id="-16" name="Wait" sid="965553686715551" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="376401095762869" type="overlay_blackbox_bottom">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="157678709984642">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="680405558680056" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="490554819648027" type="overlay_blackbox_top">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="802710034099903" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="501136921955527" type="overlay_blackbox_top">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">-64</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="533524358082291">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="610197425768296" type="Keyboard">
+                    <param id="0" name="Key">82</param>
+                </condition>
+                <condition id="-4" name="Is outside layout" sid="141759266812018" type="obj_Player" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="469144026607326" type="System" />
+            </actions>
+        </event-block>
+        <variable constant="0" name="noofstars" sid="725941712404329" static="0" type="number">400</variable>
+        <event-group description="random star spawner" sid="382281306550508" title="Star Spawner">
+            <sub-events>
+                <event-block sid="786624649103451">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="812695540709375" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="406143713922311">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="711627992626606" type="System">
+                                    <param id="0" name="Count">noofstars/2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="553122325727366" type="System">
+                                    <param id="0" name="Object to create">obj_star</param>
+                                    <param id="1" name="Layer">&quot;stars1&quot;</param>
+                                    <param id="2" name="X">random(WindowWidth)</param>
+                                    <param id="3" name="Y">random(WindowHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="203150300314769">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="142970078041118" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="999852108907463">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="950163407561827" type="System">
+                                    <param id="0" name="Count">noofstars/2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="720231591347936" type="System">
+                                    <param id="0" name="Object to create">obj_star</param>
+                                    <param id="1" name="Layer">&quot;stars2&quot;</param>
+                                    <param id="2" name="X">random(WindowWidth)</param>
+                                    <param id="3" name="Y">random(WindowHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="247845953062093">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="684682205598049" type="obj_star" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="953024021501354" type="obj_star">
+                            <param id="0" name="Frame number">random(0,2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="all enemy acts" sid="636283200345906" title="Enemy">
+            <sub-events>
+                <event-block sid="654281922720948">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="236054652113248" type="obj_enemy_flyupdwon" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="209638170568639" type="obj_enemy_flyupdwon">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496575667101876">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="362166069733416" type="obj_Player">
+                            <param id="0" name="Object">obj_enemy_flyupdwon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="888123089835920" type="obj_Player">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124816390712097">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="236600715489487" type="obj_Player">
+                            <param id="0" name="Object">obj_enemy_fly2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="641851879511944" type="obj_Player">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="343213146852589">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="179978319862258" type="obj_Player">
+                            <param id="0" name="Object">obj_enemy_indistructible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="923653824478836" type="obj_Player">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="412340123266434" title="Rain">
+            <sub-events>
+                <event-block sid="466289627174954">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="959481702879571" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="548121904772725" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;rain&quot;</param>
+                            <param id="3" name="Loop">1</param>
+                            <param id="4" name="Volume">-20</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815430391861770">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="641839271490854" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="729865281593647" type="System">
+                            <param id="0" name="Object to create">obj_raindrop</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">random(WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="461682434731778" type="obj_raindrop">
+                            <param id="0" name="Angle">100+random(-3,3)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="675800963693638" type="obj_raindrop">
+                            <param id="0" name="Speed">random(600,800)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="246274864829829">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="512521763855925" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="616984788483068" type="System">
+                            <param id="0" name="Object to create">obj_raindrop</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">random(WindowWidth+100)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="919177319039276" type="obj_raindrop">
+                            <param id="0" name="Angle">100+random(-3,3)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="355246338477832" type="obj_raindrop">
+                            <param id="0" name="Speed">random(600,800)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="407838526778915">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="363163961669065" type="obj_raindrop">
+                            <param id="0" name="Object">tilemap_solid</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="251941210224065" type="System">
+                            <param id="0" name="Object to create">particle_raindrops</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">obj_raindrop.X</param>
+                            <param id="3" name="Y">obj_raindrop.Y - 6</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="922191937720403" type="particle_raindrops">
+                            <param id="0" name="Rate">random(1,4)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="200799882376740" type="obj_raindrop" />
+                    </actions>
+                </event-block>
+                <event-block sid="272158440552836">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="211927029017813" type="obj_raindrop" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="205659979206914" type="obj_raindrop" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -253,16 +253,13 @@
         <object-type name="obj_star" sid="107093192909162">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268013093975986" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268013093975986" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Enemy_fly1" sid="613350501404652">
+        <object-type name="obj_enemy_flyupdwon" sid="613350501404652">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sine" sid="749145895772547">
@@ -290,7 +287,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Enemy_fly2" sid="604981289230941">
+        <object-type name="obj_enemy_fly2" sid="604981289230941">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sine" sid="931127800990375">
@@ -321,7 +318,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Enemy_float_indestrucable" sid="558668296522286">
+        <object-type name="obj_enemy_indistructible" sid="558668296522286">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767828434064110" speed="5">
@@ -342,7 +339,8 @@
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>GameController.xml</event-sheet>
+        <event-sheet>Player.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
