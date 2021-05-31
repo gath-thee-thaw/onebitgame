@@ -21,8 +21,10 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -69,6 +71,9 @@
                 </behavior-type>
                 <behavior-type name="ScrollTo" sid="311548901672709">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="341834387299495">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -254,6 +259,80 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_fly1" sid="613350501404652">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="749145895772547">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="354838276738391" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0380.png">
+                        <collision-poly>
+                            <point x="0.199219" y="0.429688" />
+                            <point x="0.792969" y="0.429688" />
+                            <point x="0.796875" y="0.941406" />
+                            <point x="0.207031" y="0.941406" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0381.png">
+                        <collision-poly>
+                            <point x="0.199219" y="0.429688" />
+                            <point x="0.792969" y="0.429688" />
+                            <point x="0.796875" y="0.941406" />
+                            <point x="0.207031" y="0.941406" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_fly2" sid="604981289230941">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="931127800990375">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="914405665238059">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561528167077440" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0383.png">
+                        <collision-poly>
+                            <point x="0.0634766" y="0.249023" />
+                            <point x="0.9375" y="0.25" />
+                            <point x="0.9375" y="0.811523" />
+                            <point x="0.0625" y="0.810547" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0384.png">
+                        <collision-poly>
+                            <point x="0.0634766" y="0.249023" />
+                            <point x="0.9375" y="0.25" />
+                            <point x="0.9375" y="0.811523" />
+                            <point x="0.0625" y="0.810547" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_float_indestrucable" sid="558668296522286">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767828434064110" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0340.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.3125" />
+                            <point x="0.811523" y="0.311523" />
+                            <point x="0.8125" y="1" />
+                            <point x="0.186523" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

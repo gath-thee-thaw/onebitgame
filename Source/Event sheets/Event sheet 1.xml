@@ -3,85 +3,85 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-block sid="759842853253314">
+        <event-block sid="966718627672716">
             <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="997714655473691" type="obj_Player" />
-                <condition behavior="Platform" id="2" name="Is on floor" sid="369690335077671" type="obj_Player" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="506664546396981" type="obj_Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="997407546761190" type="obj_Player" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="322229969471133" type="obj_Player">
+                <action id="4" name="Set animation" sid="276404749126991" type="obj_Player">
                     <param id="0" name="Animation">&quot;run&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="565281228434231" type="particle_dusttrails">
+                <action id="-15" name="Set visible" sid="616961629971405" type="particle_dusttrails">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="905629104588442">
+        <event-block sid="633756020916624">
             <conditions>
-                <condition id="-22" name="Else" sid="750374988300116" type="System" />
+                <condition id="-22" name="Else" sid="490854592130258" type="System" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="123616599503475" type="obj_Player">
+                <action id="4" name="Set animation" sid="717912606954980" type="obj_Player">
                     <param id="0" name="Animation">&quot;idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="512472143590386" type="particle_dusttrails">
+                <action id="-15" name="Set visible" sid="910979631080678" type="particle_dusttrails">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="208223827230258">
+        <event-block any="1" sid="817560841186532">
             <conditions>
-                <condition id="2" name="Key is down" sid="707250333413190" type="Keyboard">
+                <condition id="2" name="Key is down" sid="138293583614237" type="Keyboard">
                     <param id="0" name="Key">68</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="669668105961150" type="Keyboard">
+                <condition id="2" name="Key is down" sid="398978332624343" type="Keyboard">
                     <param id="0" name="Key">39</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="604294361141082" type="obj_Player">
+                <action behavior="Platform" id="7" name="Simulate control" sid="843470204991928" type="obj_Player">
                     <param id="0" name="Control">1</param>
                 </action>
-                <action id="7" name="Set mirrored" sid="796711304043643" type="obj_Player">
+                <action id="7" name="Set mirrored" sid="158892004854164" type="obj_Player">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="225201126196056">
+        <event-block any="1" sid="364360936702109">
             <conditions>
-                <condition id="2" name="Key is down" sid="210169541300177" type="Keyboard">
+                <condition id="2" name="Key is down" sid="830998560428197" type="Keyboard">
                     <param id="0" name="Key">65</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="165368605967585" type="Keyboard">
+                <condition id="2" name="Key is down" sid="568589000954041" type="Keyboard">
                     <param id="0" name="Key">37</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="812650183039124" type="obj_Player">
+                <action behavior="Platform" id="7" name="Simulate control" sid="112367951129499" type="obj_Player">
                     <param id="0" name="Control">0</param>
                 </action>
-                <action id="7" name="Set mirrored" sid="598236194659131" type="obj_Player">
+                <action id="7" name="Set mirrored" sid="582332557871414" type="obj_Player">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="996043622398001">
+        <event-block any="1" sid="429821815202796">
             <conditions>
-                <condition id="2" name="Key is down" sid="958805066198438" type="Keyboard">
+                <condition id="2" name="Key is down" sid="757723775956854" type="Keyboard">
                     <param id="0" name="Key">87</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="270822843626264" type="Keyboard">
+                <condition id="2" name="Key is down" sid="212254599303484" type="Keyboard">
                     <param id="0" name="Key">38</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="745973452266778" type="obj_Player">
+                <action behavior="Platform" id="7" name="Simulate control" sid="229281277743452" type="obj_Player">
                     <param id="0" name="Control">2</param>
                 </action>
-                <action id="4" name="Set animation" sid="783884585421458" type="obj_Player">
+                <action id="4" name="Set animation" sid="952008706272106" type="obj_Player">
                     <param id="0" name="Animation">&quot;jump&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -339,5 +339,229 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="all enemy acts" sid="636283200345906" title="Enemy">
+            <sub-events>
+                <event-block sid="654281922720948">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="236054652113248" type="Enemy_fly1" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="209638170568639" type="Enemy_fly1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496575667101876">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="362166069733416" type="obj_Player">
+                            <param id="0" name="Object">Enemy_fly1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="888123089835920" type="obj_Player">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124816390712097">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="236600715489487" type="obj_Player">
+                            <param id="0" name="Object">Enemy_fly2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="641851879511944" type="obj_Player">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="343213146852589">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="179978319862258" type="obj_Player">
+                            <param id="0" name="Object">Enemy_float_indestrucable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="923653824478836" type="obj_Player">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="605906744095331">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="336751645660735" type="obj_Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="347093875101763" type="obj_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="504441672876482" type="obj_Player">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="642963162908770" type="particle_dusttrails">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="825073130865790">
+            <conditions>
+                <condition id="-22" name="Else" sid="609772914402757" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="810727538428372" type="obj_Player">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="928423257139312" type="particle_dusttrails">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="178412598966622">
+            <conditions>
+                <condition id="2" name="Key is down" sid="719337431006570" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="632311932612675" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="959021410784489" type="obj_Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="957293938732751" type="obj_Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="730445538689575">
+            <conditions>
+                <condition id="2" name="Key is down" sid="734378809474564" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="653275918176534" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="679374158845739" type="obj_Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="304555245924702" type="obj_Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="536464519969263">
+            <conditions>
+                <condition id="2" name="Key is down" sid="657107557547944" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="692808488162970" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="565833938019177" type="obj_Player">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="396855438386678" type="obj_Player">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="729996688275435">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="178318390521225" type="obj_Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="984279735915010" type="obj_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="522372386255624" type="obj_Player">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="227890570001150" type="particle_dusttrails">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="352422816234321">
+            <conditions>
+                <condition id="-22" name="Else" sid="891847608035938" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="172009624406935" type="obj_Player">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="107000131410833" type="particle_dusttrails">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="708295175922012">
+            <conditions>
+                <condition id="2" name="Key is down" sid="315165576890696" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="983673914300025" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="416583433007371" type="obj_Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="266676702563849" type="obj_Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="872763863252631">
+            <conditions>
+                <condition id="2" name="Key is down" sid="258966906029425" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="400685040821992" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="523483518813498" type="obj_Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="378456026407746" type="obj_Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="479677298078849">
+            <conditions>
+                <condition id="2" name="Key is down" sid="432049535013490" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="785777115031237" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="308434131945736" type="obj_Player">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="121738005639897" type="obj_Player">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
