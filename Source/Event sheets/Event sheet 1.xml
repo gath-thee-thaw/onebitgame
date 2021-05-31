@@ -265,5 +265,79 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="173718745464266">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="198643783951140" type="obj_Player" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="906372770881055" type="System">
+                    <param id="0" name="Object to create">Particles</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">obj_Player.X</param>
+                    <param id="3" name="Y">obj_Player.Y + 8</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="noofstars" sid="725941712404329" static="0" type="number">400</variable>
+        <event-group description="random star spawner" sid="382281306550508" title="Star Spawner">
+            <sub-events>
+                <event-block sid="786624649103451">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="812695540709375" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="406143713922311">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="711627992626606" type="System">
+                                    <param id="0" name="Count">noofstars/2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="553122325727366" type="System">
+                                    <param id="0" name="Object to create">obj_star</param>
+                                    <param id="1" name="Layer">&quot;stars1&quot;</param>
+                                    <param id="2" name="X">random(WindowWidth)</param>
+                                    <param id="3" name="Y">random(WindowHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="203150300314769">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="142970078041118" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="999852108907463">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="950163407561827" type="System">
+                                    <param id="0" name="Count">noofstars/2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="720231591347936" type="System">
+                                    <param id="0" name="Object to create">obj_star</param>
+                                    <param id="1" name="Layer">&quot;stars2&quot;</param>
+                                    <param id="2" name="X">random(WindowWidth)</param>
+                                    <param id="3" name="Y">random(WindowHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="247845953062093">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="684682205598049" type="obj_star" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="953024021501354" type="obj_star">
+                            <param id="0" name="Frame number">random(0,4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

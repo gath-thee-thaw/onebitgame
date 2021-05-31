@@ -75,6 +75,7 @@
                 <animation framecount="4" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="727362659986477" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run1.png">
                         <image-point name="trail" x="0.5" y="1" />
+                        <image-point name="gun" x="0.875" y="0.75" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -84,6 +85,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run2.png">
                         <image-point name="trail" x="0.5" y="1" />
+                        <image-point name="gun" x="0.875" y="0.6875" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -93,6 +95,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run3.png">
                         <image-point name="trail" x="0.5" y="1" />
+                        <image-point name="gun" x="0.875" y="0.625" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -102,6 +105,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run4.png">
                         <image-point name="trail" x="0.5" y="1" />
+                        <image-point name="gun" x="0.875" y="0.625" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -112,6 +116,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="986130577948187" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\idle.png">
+                        <image-point name="gun" x="0.875" y="0.75" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -122,6 +127,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="413070231119058" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\jump.png">
+                        <image-point name="gun" x="0.875" y="0.75" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -132,6 +138,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="554383365604864" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\dead.png">
+                        <image-point name="gun" x="0.875" y="0.75" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -233,6 +240,22 @@
             </behaviors>
             <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed.png" />
             <tiles />
+        </object-type>
+        <object-type name="Particles" sid="476473867041588">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="obj_star" sid="107093192909162">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268013093975986" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
