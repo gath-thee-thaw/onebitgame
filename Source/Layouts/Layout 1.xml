@@ -230,13 +230,13 @@
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
                         <speed>20</speed>
-                        <size>1</size>
+                        <size>2</size>
                         <opacity>100</opacity>
                         <grow-rate>0</grow-rate>
                         <x-randomiser>4</x-randomiser>
                         <y-randomiser>2</y-randomiser>
                         <speed-randomiser->0</speed-randomiser->
-                        <size-randomiser>0</size-randomiser>
+                        <size-randomiser>2</size-randomiser>
                         <grow-rate-randomiser>2</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
                         <acceleration>-150</acceleration>
@@ -245,7 +245,7 @@
                         <speed-randomiser>100</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
                         <destroy-mode>Fade to invisible</destroy-mode>
-                        <timeout>0.2</timeout>
+                        <timeout>0.4</timeout>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -259,7 +259,7 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-0.52359879</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="obj_Player" uid="2">
@@ -269,6 +269,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <speed>400</speed>
+                        <deceleration>0</deceleration>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -276,7 +280,7 @@
                                 <acceleration>1000</acceleration>
                                 <deceleration>500</deceleration>
                                 <jump-strength>300</jump-strength>
-                                <gravity>1500</gravity>
+                                <gravity>400</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
@@ -306,7 +310,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Particles" uid="0">
+                <instance type="particle_jump" uid="0">
                     <properties>
                         <rate>20</rate>
                         <spray-cone>120</spray-cone>
@@ -342,6 +346,28 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="glider" uid="15">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-78.100028992</x>
+                        <y>8.705764771</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.625</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -573,8 +599,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -620,10 +646,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-134.875350952</x>
-                        <y>154.247283936</y>
+                        <x>147.999801636</x>
+                        <y>156.535125732</y>
                         <z>0</z>
-                        <width>80</width>
+                        <width>147.446334839</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

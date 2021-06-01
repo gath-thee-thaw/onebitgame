@@ -56,7 +56,10 @@
                 <condition id="0" name="On key pressed" sid="610197425768296" type="Keyboard">
                     <param id="0" name="Key">82</param>
                 </condition>
-                <condition id="-4" name="Is outside layout" sid="141759266812018" type="obj_Player" />
+                <condition id="-2" name="Compare Y" sid="141759266812018" type="obj_Player">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">WindowHeight</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="469144026607326" type="System" />

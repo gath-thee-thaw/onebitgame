@@ -11,6 +11,7 @@
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -65,6 +66,10 @@
         </object-type>
         <object-type name="obj_Player" sid="797682919753540">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="speed" sid="433835117421950" type="number" />
+                <instance-variable name="deceleration" sid="607068964803181" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="936902347301189">
                     <behavior id="Platform" />
@@ -130,9 +135,10 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="413070231119058" speed="5">
+                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="413070231119058" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\jump.png">
                         <image-point name="gun" x="0.875" y="0.75" />
+                        <image-point name="glider" x="0.5" y="-0.0625" />
                         <collision-poly>
                             <point x="0.253906" y="0.304688" />
                             <point x="0.757813" y="0.304688" />
@@ -246,7 +252,7 @@
             <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed.png" />
             <tiles />
         </object-type>
-        <object-type name="Particles" sid="476473867041588">
+        <object-type name="particle_jump" sid="476473867041588">
             <plugin id="Particles" />
             <texture />
         </object-type>
@@ -333,6 +339,54 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="glider" sid="249306256058165">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225786190352720" speed="32">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider1.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider2.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider3.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider4.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="239064794781191">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -358,6 +412,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="16" />
     </global-instances>
     <sounds-folder>
         <file name="rain.m4a" />
