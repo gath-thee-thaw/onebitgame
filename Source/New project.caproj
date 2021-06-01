@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Chris Hackmann (aka linkman2004)" id="MagiCam" version="6.5">MagiCam</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -73,9 +74,6 @@
             <behaviors>
                 <behavior-type name="Platform" sid="936902347301189">
                     <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="311548901672709">
-                    <behavior id="scrollto" />
                 </behavior-type>
                 <behavior-type name="Flash" sid="341834387299495">
                     <behavior id="Flash" />
@@ -249,7 +247,7 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed.png" />
+            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed2.png" />
             <tiles />
         </object-type>
         <object-type name="particle_jump" sid="476473867041588">
@@ -387,6 +385,25 @@
         <object-type name="Function" sid="239064794781191">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Camera" sid="914305903276240">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="MoveTo" sid="825645035079092">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="670658947133868">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118064899150844" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MagiCam" sid="783949680848306">
+            <plugin id="MagiCam" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -413,6 +430,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="16" />
+        <global-instance type="MagiCam" uid="18" />
     </global-instances>
     <sounds-folder>
         <file name="rain.m4a" />

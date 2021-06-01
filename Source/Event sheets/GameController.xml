@@ -265,5 +265,55 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <variable comment="camera horizontal follow offset" constant="0" name="camXOffset" sid="397934722073442" static="0" type="number">5</variable>
+        <variable comment="vertical folllow offset" constant="0" name="camYOffset" sid="385005172220510" static="0" type="number">-4</variable>
+        <variable comment="multiplyer of lerp, idk lol just change it very slightly" constant="0" name="camSpeed" sid="742672944927159" static="0" type="number">10</variable>
+        <event-group description="" sid="147436149940825" title="Camera">
+            <sub-events>
+                <event-block sid="910194376632117">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="166746112566733" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="MoveTo" disabled="1" id="4" name="Move to XY" sid="757597407835069" type="Camera">
+                            <param id="0" name="X">obj_Player.X</param>
+                            <param id="1" name="Y">obj_Player.Y</param>
+                        </action>
+                        <action disabled="1" id="0" name="Follow object" sid="445807527221504" type="MagiCam">
+                            <param id="0" name="Camera">&quot;&quot;</param>
+                            <param id="1" name="Object">Camera</param>
+                            <param id="2" name="Weight">1</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="422818131212454" type="Camera">
+                            <param id="0" name="X">camXOffset + (lerp(Self.X,obj_Player.X, camspeed*dt))</param>
+                            <param id="1" name="Y">camYOffset +  (lerp(Self.Y,obj_Player.Y-10 , camspeed*dt))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="173499017018062">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="761241991321506" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="100" name="Create local camera" sid="630519907880208" type="MagiCam">
+                            <param id="0" name="Name">&quot;lol&quot;</param>
+                            <param id="1" name="X">0</param>
+                            <param id="2" name="Y">0</param>
+                            <param id="3" name="Scale">1</param>
+                            <param id="4" name="Active">1</param>
+                        </action>
+                        <action disabled="1" id="3" name="Enable following" sid="247634103293833" type="MagiCam">
+                            <param id="0" name="Camera">&quot;lol&quot;</param>
+                            <param id="1" name="Following">0</param>
+                        </action>
+                        <action disabled="1" id="1" name="Set follow lag" sid="855272614295424" type="MagiCam">
+                            <param id="0" name="Camera">&quot;lol&quot;</param>
+                            <param id="1" name="Lag">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
