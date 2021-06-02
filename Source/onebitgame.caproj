@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
+    <name>onebitgame</name>
     <description></description>
     <version>1.0</version>
     <author></author>
@@ -43,14 +43,16 @@
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
+        <prop name="Downscaling">High quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox integer scale</prop>
-        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
@@ -403,6 +405,52 @@
         </object-type>
         <object-type name="MagiCam" sid="783949680848306">
             <plugin id="MagiCam" />
+        </object-type>
+        <object-type name="Sprite" sid="129750686544800">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296539680726599" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="moon" sid="843929283106575">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909843252024628" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\moon.png">
+                        <collision-poly>
+                            <point x="0.140625" y="0.140625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.859375" y="0.140625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.859375" y="0.859375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.140625" y="0.859375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cloud1" sid="605050669028545">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="108808701621640" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\clouds1.png">
+                        <collision-poly>
+                            <point x="0.078125" y="0.15625" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.867188" y="0.265625" />
+                            <point x="0.992188" y="0.5" />
+                            <point x="0.929688" y="0.859375" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.125" y="0.75" />
+                            <point x="0.0078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

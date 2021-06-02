@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1" order="0">Layout 1</layout>
-        <event-sheet order="1">GameController</event-sheet>
-        <event-sheet order="2">Player</event-sheet>
+        <event-sheet order="1">Player</event-sheet>
+        <event-sheet order="2">GameController</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,5 +40,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/obj_enemy_indistructible/" />
         <folder expanded="1" path="animation-folder/glider/" />
         <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/moon/" />
+        <folder expanded="1" path="animation-folder/cloud1/" />
     </folders-expanded>
 </c2uistate>

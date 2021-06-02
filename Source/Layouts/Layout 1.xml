@@ -31,6 +31,88 @@
             <instances />
             <effects />
         </layer>
+        <layer name="moon" sid="463137265620472">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0.02</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>0.05</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="moon" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>255.131896973</x>
+                        <y>52.19084549</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="cloud" sid="316305156396548">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0.04</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="cloud1" uid="20">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>292.035491943</x>
+                        <y>73.051124573</y>
+                        <z>0</z>
+                        <width>90.310531616</width>
+                        <height>45.155265808</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="stars1" sid="238217791043976">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -279,7 +361,7 @@
                                 <max-speed>60</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>500</deceleration>
-                                <jump-strength>300</jump-strength>
+                                <jump-strength>120</jump-strength>
                                 <gravity>400</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
@@ -402,7 +484,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -546,8 +628,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -689,7 +771,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>

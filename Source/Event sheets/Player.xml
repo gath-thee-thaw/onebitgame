@@ -40,7 +40,7 @@
             <actions>
                 <action id="-4" name="Set position to another object" sid="712048704229698" type="particle_dusttrails">
                     <param id="0" name="Object">obj_Player</param>
-                    <param id="1" name="Image point (optional)">1</param>
+                    <param id="1" name="Image point (optional)">&quot;trail&quot;</param>
                 </action>
                 <action disabled="1" id="0" name="Set text" sid="705766483766803" type="Text">
                     <param id="0" name="Text">obj_Player.speed</param>
@@ -67,7 +67,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="552937810156063" type="System">
                             <param id="0" name="Variable">camXOffset</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">abs(camXOffset)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -89,7 +89,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="179883450924322" type="System">
                             <param id="0" name="Variable">camXOffset</param>
-                            <param id="1" name="Value">-5</param>
+                            <param id="1" name="Value">-1 * abs(camXOffset)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -106,16 +106,25 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="447731754285151" type="obj_Player">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action disabled="1" id="4" name="Set animation" sid="423388395181307" type="obj_Player">
-                            <param id="0" name="Animation">&quot;jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="651213476955289" title="Gliding">
             <sub-events>
+                <variable comment="stores initial gravity of player incase it needs to be changed" constant="0" name="initialgravity" sid="190148542862805" static="1" type="number">0</variable>
+                <event-block sid="979875017750082">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="829873237100474" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="373778740182089" type="glider" />
+                        <action id="-9" name="Set value" sid="892982198238210" type="System">
+                            <param id="0" name="Variable">initialgravity</param>
+                            <param id="1" name="Value">obj_Player.Platform.Gravity</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="604405536355973">
                     <conditions>
                         <condition id="2" name="Key is down" sid="350714308765736" type="Keyboard">
@@ -166,7 +175,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="5" name="Set gravity" sid="301755155931105" type="obj_Player">
-                            <param id="0" name="Gravity">1500</param>
+                            <param id="0" name="Gravity">initialgravity</param>
                         </action>
                         <action id="-9" name="Set value" sid="144997774165812" type="System">
                             <param id="0" name="Variable">isGliding</param>
@@ -215,6 +224,9 @@
                             <param id="0" name="Object">obj_Player</param>
                             <param id="1" name="Image point (optional)">&quot;glider&quot;</param>
                         </action>
+                        <action id="-20" name="Set layout scale" sid="875255700918896" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale,1,1*dt)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="495106724562884">
@@ -230,6 +242,9 @@
                         <action id="-10" name="Set value" sid="348320579469101" type="obj_Player">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Value">60</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="684978540326333" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale,1.2,1*dt)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -257,6 +272,9 @@
                 <action behavior="Platform" id="3" name="Set deceleration" sid="433043678856779" type="obj_Player">
                     <param id="0" name="Deceleration">obj_Player.deceleration</param>
                 </action>
+                <action id="0" name="Set text" sid="186184401901727" type="Text">
+                    <param id="0" name="Text">obj_Player.Platform.Gravity</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="770655535782510">
@@ -269,20 +287,12 @@
             </conditions>
             <actions>
                 <action id="-16" name="Wait" sid="596790059882121" type="System">
-                    <param id="0" name="Seconds">5</param>
+                    <param id="0" name="Seconds">3</param>
                 </action>
                 <action id="-10" name="Set value" sid="850692349565473" type="obj_Player">
                     <param id="0" name="Instance variable">deceleration</param>
                     <param id="1" name="Value">500</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="979875017750082">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="829873237100474" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="373778740182089" type="glider" />
             </actions>
         </event-block>
     </events>
