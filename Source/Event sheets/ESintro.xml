@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ESintro</name>
+    <events>
+        <event-block disabled="1" sid="916317688930848">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="989202207214080" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="672758664654795" type="SpriteFont">
+                    <param id="0" name="Text">&quot;a game by&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="905304042713509" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="306310135857193" type="SpriteFont">
+                    <param id="0" name="Text">&quot;gath &amp; veo&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="324585633153517" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="962821723653066" type="SpriteFont">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="209519270226855" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Set text" sid="313852255105733" type="SpriteFont">
+                    <param id="0" name="Text">&quot;to all the important people of our lives&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="867754652761017" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="736546546253084">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="946786323806313" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="662013567335528" type="System">
+                    <param id="0" name="Group name">&quot;Camera&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Set text" sid="194264778590538" type="intro">
+                    <param id="0" name="Text">&quot;a game by&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="736219562032012" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="376839700665091" type="intro">
+                    <param id="0" name="Text">&quot;gath&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="201071606063269" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="1" name="Append text" sid="427988093994410" type="intro">
+                    <param id="0" name="Text">&quot; and&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="883086049807904" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="1" name="Append text" sid="491537531853559" type="intro">
+                    <param id="0" name="Text">&quot; veo&quot;</param>
+                </action>
+                <action id="1" name="Play" sid="680970398281646" type="AudioHelper">
+                    <param id="0" name="Audio file">oecumenesleeps</param>
+                    <param id="1" name="Loop">1</param>
+                    <param id="2" name="End volume">1</param>
+                    <param id="3" name="Tag (optional)">&quot;&quot;</param>
+                    <param id="4" name="Fade-in time">10</param>
+                    <param id="5" name="Start volume">&quot;-100dB&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="869430531879746" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="738884500262014" type="intro">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="950321876092473" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="3" name="Set font size" sid="525972902940076" type="intro">
+                    <param id="0" name="Size (pt)">6</param>
+                </action>
+                <action id="0" name="Set text" sid="956055711879821" type="intro">
+                    <param id="0" name="Text">&quot;to all important people in our lives&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="130894914423618" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="1" name="Append text" sid="256331336250886" type="intro">
+                    <param id="0" name="Text">&quot;.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="320308573405225" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="418261675013220" type="intro">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="185810521456942" type="intro">
+                    <param id="0" name="Fade-out time">2</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="975227359769842" type="intro_bg">
+                    <param id="0" name="Fade-out time">4</param>
+                </action>
+                <action id="-12" name="Set group active" sid="329404880002449" type="System">
+                    <param id="0" name="Group name">&quot;Camera&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="530784250092294">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="901546724761228" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="9" name="Preload (by name)" sid="843082411163192" type="Audio">
+                    <param id="0" name="Folder">1</param>
+                    <param id="1" name="Audio file name">&quot;oecumenesleeps&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

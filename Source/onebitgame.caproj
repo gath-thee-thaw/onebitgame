@@ -15,7 +15,9 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Chris Hackmann (aka linkman2004)" id="MagiCam" version="6.5">MagiCam</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_audio_helper" version="0.100000001">Audio helper</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
@@ -30,7 +32,9 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="inverse">Inverse</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -38,7 +42,7 @@
         <width>320</width>
         <height>180</height>
     </window-size>
-    <pixel-rounding>1</pixel-rounding>
+    <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -52,181 +56,403 @@
         <prop name="Loader style">Progress bar only</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
-        <prop name="Use high-DPI display">Yes</prop>
+        <prop name="Use high-DPI display">No</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Keyboard" sid="4436305314906168">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Audio" sid="2722091819329769">
-            <plugin id="Audio" />
-        </object-type>
-        <object-type name="tilemap_decorations1" sid="565985350137969">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed.png" />
-            <tiles />
-        </object-type>
-        <object-type name="obj_Player" sid="797682919753540">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="speed" sid="433835117421950" type="number" />
-                <instance-variable name="deceleration" sid="607068964803181" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Platform" sid="936902347301189">
-                    <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="Flash" sid="341834387299495">
-                    <behavior id="Flash" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="4" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="727362659986477" speed="8">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run1.png">
-                        <image-point name="trail" x="0.5" y="1" />
-                        <image-point name="gun" x="0.875" y="0.75" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run2.png">
-                        <image-point name="trail" x="0.5" y="1" />
-                        <image-point name="gun" x="0.875" y="0.6875" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run3.png">
-                        <image-point name="trail" x="0.5" y="1" />
-                        <image-point name="gun" x="0.875" y="0.625" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run4.png">
-                        <image-point name="trail" x="0.5" y="1" />
-                        <image-point name="gun" x="0.875" y="0.625" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="986130577948187" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\idle.png">
-                        <image-point name="gun" x="0.875" y="0.75" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="413070231119058" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\jump.png">
-                        <image-point name="gun" x="0.875" y="0.75" />
-                        <image-point name="glider" x="0.5" y="-0.0625" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="554383365604864" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\dead.png">
-                        <image-point name="gun" x="0.875" y="0.75" />
-                        <collision-poly>
-                            <point x="0.253906" y="0.304688" />
-                            <point x="0.757813" y="0.304688" />
-                            <point x="0.761719" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="overlay_light" sid="697083258378129">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508663392592440" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="particle_raindrops" sid="275752336563016">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="obj_raindrop" sid="934746175084292">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="789696970900498">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783435205897632" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="1">
-                        <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="obj_invisiblecollisions" sid="826913953285258">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Solid" sid="617683884751578">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
-        <object-type name="overlay_blackbox_bottom" sid="382141737420769">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="MoveTo" sid="263011214498717">
-                    <behavior id="Rex_MoveTo" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904959653468333" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="overlay_blackbox_top" sid="700546031210718">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="MoveTo" sid="700240107709891">
-                    <behavior id="Rex_MoveTo" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764795720846442" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="Intro">
+            <object-type name="intro_bg" sid="960148915088839">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="629299890379912">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878430332131755" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpriteFont" sid="496834014604632">
+                <plugin id="SpriteFontPlus" />
+                <effects>
+                    <effect-type name="Inverse">
+                        <effect id="inverse" />
+                    </effect-type>
+                </effects>
+                <texture original-source="C:\Users\gath\Desktop\SpriteFont_Pixellari_Medium_(72)_[1,1,1,1]_63x72.png" />
+            </object-type>
+            <object-type name="intro" sid="321594033770843">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="999686428662281">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="Objects">
+            <object-folder name="Player">
+                <object-type name="obj_Player" sid="797682919753540">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="speed" sid="433835117421950" type="number" />
+                        <instance-variable name="deceleration" sid="607068964803181" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Platform" sid="936902347301189">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                        <behavior-type name="Flash" sid="341834387299495">
+                            <behavior id="Flash" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="4" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="727362659986477" speed="8">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run1.png">
+                                <image-point name="trail" x="0.5" y="1" />
+                                <image-point name="gun" x="0.875" y="0.75" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run2.png">
+                                <image-point name="trail" x="0.5" y="1" />
+                                <image-point name="gun" x="0.875" y="0.6875" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run3.png">
+                                <image-point name="trail" x="0.5" y="1" />
+                                <image-point name="gun" x="0.875" y="0.625" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run4.png">
+                                <image-point name="trail" x="0.5" y="1" />
+                                <image-point name="gun" x="0.875" y="0.625" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="986130577948187" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\idle.png">
+                                <image-point name="gun" x="0.875" y="0.75" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="413070231119058" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\jump.png">
+                                <image-point name="gun" x="0.875" y="0.75" />
+                                <image-point name="glider" x="0.5" y="-0.0625" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="554383365604864" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\dead.png">
+                                <image-point name="gun" x="0.875" y="0.75" />
+                                <collision-poly>
+                                    <point x="0.253906" y="0.304688" />
+                                    <point x="0.757813" y="0.304688" />
+                                    <point x="0.761719" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="glider" sid="249306256058165">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225786190352720" speed="32">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider1.png">
+                                <collision-poly>
+                                    <point x="0.375" y="0.375" />
+                                    <point x="0.5" y="0.3125" />
+                                    <point x="0.625" y="0.375" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider2.png">
+                                <collision-poly>
+                                    <point x="0.3125" y="0.3125" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.6875" y="0.3125" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider3.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.1875" />
+                                    <point x="0.5" y="0.125" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider4.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.1875" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="obj_enemy_fly2" sid="604981289230941">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="931127800990375">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Sine2" sid="914405665238059">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561528167077440" speed="8">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0383.png">
+                            <collision-poly>
+                                <point x="0.0634766" y="0.249023" />
+                                <point x="0.9375" y="0.25" />
+                                <point x="0.9375" y="0.811523" />
+                                <point x="0.0625" y="0.810547" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0384.png">
+                            <collision-poly>
+                                <point x="0.0634766" y="0.249023" />
+                                <point x="0.9375" y="0.25" />
+                                <point x="0.9375" y="0.811523" />
+                                <point x="0.0625" y="0.810547" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="obj_enemy_flyupdwon" sid="613350501404652">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="749145895772547">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="354838276738391" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0380.png">
+                            <collision-poly>
+                                <point x="0.199219" y="0.429688" />
+                                <point x="0.792969" y="0.429688" />
+                                <point x="0.796875" y="0.941406" />
+                                <point x="0.207031" y="0.941406" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0381.png">
+                            <collision-poly>
+                                <point x="0.199219" y="0.429688" />
+                                <point x="0.792969" y="0.429688" />
+                                <point x="0.796875" y="0.941406" />
+                                <point x="0.207031" y="0.941406" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="obj_enemy_indistructible" sid="558668296522286">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767828434064110" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0340.png">
+                            <collision-poly>
+                                <point x="0.1875" y="0.3125" />
+                                <point x="0.811523" y="0.311523" />
+                                <point x="0.8125" y="1" />
+                                <point x="0.186523" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="obj_invisiblecollisions" sid="826913953285258">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="617683884751578">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Rain">
+            <object-type name="obj_raindrop" sid="934746175084292">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="789696970900498">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783435205897632" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="particle_raindrops" sid="275752336563016">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Entities">
+            <object-type name="cloud1" sid="605050669028545">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="108808701621640" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\clouds1.png">
+                            <collision-poly>
+                                <point x="0.078125" y="0.15625" />
+                                <point x="0.5" y="0.046875" />
+                                <point x="0.867188" y="0.265625" />
+                                <point x="0.992188" y="0.5" />
+                                <point x="0.929688" y="0.859375" />
+                                <point x="0.5" y="0.90625" />
+                                <point x="0.125" y="0.75" />
+                                <point x="0.0078125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="star" sid="107093192909162">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268013093975986" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="moon" sid="843929283106575">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909843252024628" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\moon.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.140625" />
+                                <point x="0.5" y="0" />
+                                <point x="0.859375" y="0.140625" />
+                                <point x="1" y="0.5" />
+                                <point x="0.859375" y="0.859375" />
+                                <point x="0.5" y="1" />
+                                <point x="0.140625" y="0.859375" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Controllers">
+            <object-type name="Function" sid="239064794781191">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Audio" sid="2722091819329769">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="AudioHelper" sid="903194539767032">
+                <plugin id="Rex_audio_helper" />
+            </object-type>
+            <object-type name="MagiCam" sid="247608051159465">
+                <plugin id="MagiCam" />
+            </object-type>
+            <object-type name="Keyboard" sid="4436305314906168">
+                <plugin id="Keyboard" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Effects">
+            <object-type name="particle_dusttrails" sid="870523378876663">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="overlay_light" sid="697083258378129">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508663392592440" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="particle_jump" sid="476473867041588">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="overlay_blackbox_bottom" sid="382141737420769">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="MoveTo" sid="263011214498717">
+                        <behavior id="Rex_MoveTo" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904959653468333" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="overlay_blackbox_top" sid="700546031210718">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="MoveTo" sid="700240107709891">
+                        <behavior id="Rex_MoveTo" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764795720846442" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Text" sid="591681452931843">
             <plugin id="Text" />
             <behaviors>
@@ -238,10 +464,6 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="particle_dusttrails" sid="870523378876663">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
         <object-type name="tilemap_solid" sid="781080026689389">
             <plugin id="Tilemap" />
             <behaviors>
@@ -249,143 +471,8 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\monochrome_tilemap_transparent_packed2.png" />
+            <texture original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\tileset.png" />
             <tiles />
-        </object-type>
-        <object-type name="particle_jump" sid="476473867041588">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="obj_star" sid="107093192909162">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268013093975986" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="obj_enemy_flyupdwon" sid="613350501404652">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="749145895772547">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="354838276738391" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0380.png">
-                        <collision-poly>
-                            <point x="0.199219" y="0.429688" />
-                            <point x="0.792969" y="0.429688" />
-                            <point x="0.796875" y="0.941406" />
-                            <point x="0.207031" y="0.941406" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0381.png">
-                        <collision-poly>
-                            <point x="0.199219" y="0.429688" />
-                            <point x="0.792969" y="0.429688" />
-                            <point x="0.796875" y="0.941406" />
-                            <point x="0.207031" y="0.941406" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="obj_enemy_fly2" sid="604981289230941">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="931127800990375">
-                    <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="Sine2" sid="914405665238059">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561528167077440" speed="8">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0383.png">
-                        <collision-poly>
-                            <point x="0.0634766" y="0.249023" />
-                            <point x="0.9375" y="0.25" />
-                            <point x="0.9375" y="0.811523" />
-                            <point x="0.0625" y="0.810547" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0384.png">
-                        <collision-poly>
-                            <point x="0.0634766" y="0.249023" />
-                            <point x="0.9375" y="0.25" />
-                            <point x="0.9375" y="0.811523" />
-                            <point x="0.0625" y="0.810547" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="obj_enemy_indistructible" sid="558668296522286">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767828434064110" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="K:\ \c2\Construct\Packs\Construct 2\Packs\1bitplatformerpack_1\Tiles\Transparent\tile_0340.png">
-                        <collision-poly>
-                            <point x="0.1875" y="0.3125" />
-                            <point x="0.811523" y="0.311523" />
-                            <point x="0.8125" y="1" />
-                            <point x="0.186523" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="glider" sid="249306256058165">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225786190352720" speed="32">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider1.png">
-                        <collision-poly>
-                            <point x="0.375" y="0.375" />
-                            <point x="0.5" y="0.3125" />
-                            <point x="0.625" y="0.375" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider2.png">
-                        <collision-poly>
-                            <point x="0.3125" y="0.3125" />
-                            <point x="0.5" y="0.25" />
-                            <point x="0.6875" y="0.3125" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider3.png">
-                        <collision-poly>
-                            <point x="0.1875" y="0.1875" />
-                            <point x="0.5" y="0.125" />
-                            <point x="0.8125" y="0.1875" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider4.png">
-                        <collision-poly>
-                            <point x="0.1875" y="0.1875" />
-                            <point x="0.5" y="0.0625" />
-                            <point x="0.8125" y="0.1875" />
-                            <point x="1" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Function" sid="239064794781191">
-            <plugin id="Function" />
         </object-type>
         <object-type name="Camera" sid="914305903276240">
             <plugin id="Sprite" />
@@ -403,63 +490,36 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MagiCam" sid="783949680848306">
-            <plugin id="MagiCam" />
-        </object-type>
-        <object-type name="Sprite" sid="129750686544800">
+        <object-type name="goldenpointgrid" sid="239580632555095">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296539680726599" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="349522815234750" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\goldenpointgrid.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="moon" sid="843929283106575">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909843252024628" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\moon.png">
-                        <collision-poly>
-                            <point x="0.140625" y="0.140625" />
-                            <point x="0.5" y="0" />
-                            <point x="0.859375" y="0.140625" />
-                            <point x="1" y="0.5" />
-                            <point x="0.859375" y="0.859375" />
-                            <point x="0.5" y="1" />
-                            <point x="0.140625" y="0.859375" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+        <object-type name="one" sid="674924248277805">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
-        <object-type name="cloud1" sid="605050669028545">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="108808701621640" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\clouds1.png">
-                        <collision-poly>
-                            <point x="0.078125" y="0.15625" />
-                            <point x="0.5" y="0.046875" />
-                            <point x="0.867188" y="0.265625" />
-                            <point x="0.992188" y="0.5" />
-                            <point x="0.929688" y="0.859375" />
-                            <point x="0.5" y="0.90625" />
-                            <point x="0.125" y="0.75" />
-                            <point x="0.0078125" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+        <object-type name="one2" sid="269953016812473">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="one3" sid="467217989865733">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Level1.xml</layout>
+        <layout>Intro.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameController.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
+        <event-sheet>ESintro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
@@ -467,7 +527,7 @@
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
-                <play-in-background>No</play-in-background>
+                <play-in-background>Yes</play-in-background>
                 <positioned-audio></positioned-audio>
                 <panning-model>HRTF</panning-model>
                 <distance-model>Inverse</distance-model>
@@ -479,12 +539,19 @@
         </global-instance>
         <global-instance type="Function" uid="16" />
         <global-instance type="MagiCam" uid="18" />
+        <global-instance type="AudioHelper" uid="24">
+            <properties>
+                <audio-effect>No</audio-effect>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder>
         <file name="rain.m4a" />
         <file name="rain.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="oecumenesleeps.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
