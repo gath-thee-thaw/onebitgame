@@ -112,7 +112,6 @@
                         <animation framecount="4" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="727362659986477" speed="8">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run1.png">
                                 <image-point name="trail" x="0.5" y="1" />
-                                <image-point name="gun" x="0.875" y="0.75" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -122,7 +121,6 @@
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run2.png">
                                 <image-point name="trail" x="0.5" y="1" />
-                                <image-point name="gun" x="0.875" y="0.6875" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -132,7 +130,6 @@
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run3.png">
                                 <image-point name="trail" x="0.5" y="1" />
-                                <image-point name="gun" x="0.875" y="0.625" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -142,7 +139,6 @@
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\run4.png">
                                 <image-point name="trail" x="0.5" y="1" />
-                                <image-point name="gun" x="0.875" y="0.625" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -153,7 +149,6 @@
                         </animation>
                         <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="986130577948187" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\idle.png">
-                                <image-point name="gun" x="0.875" y="0.75" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -164,8 +159,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="413070231119058" speed="0">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\jump.png">
-                                <image-point name="gun" x="0.875" y="0.75" />
-                                <image-point name="glider" x="0.5" y="-0.0625" />
+                                <image-point name="glider" x="0.5" y="0.25" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -176,7 +170,6 @@
                         </animation>
                         <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="554383365604864" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Desktop\retroblade\Payerr\dead.png">
-                                <image-point name="gun" x="0.875" y="0.75" />
                                 <collision-poly>
                                     <point x="0.253906" y="0.304688" />
                                     <point x="0.757813" y="0.304688" />
@@ -190,45 +183,16 @@
                 <object-type name="glider" sid="249306256058165">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225786190352720" speed="32">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider1.png">
-                                <collision-poly>
-                                    <point x="0.375" y="0.375" />
-                                    <point x="0.5" y="0.3125" />
-                                    <point x="0.625" y="0.375" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0.5" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider2.png">
-                                <collision-poly>
-                                    <point x="0.3125" y="0.3125" />
-                                    <point x="0.5" y="0.25" />
-                                    <point x="0.6875" y="0.3125" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0.5" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider3.png">
-                                <collision-poly>
-                                    <point x="0.1875" y="0.1875" />
-                                    <point x="0.5" y="0.125" />
-                                    <point x="0.8125" y="0.1875" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0.5" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider4.png">
-                                <collision-poly>
-                                    <point x="0.1875" y="0.1875" />
-                                    <point x="0.5" y="0.0625" />
-                                    <point x="0.8125" y="0.1875" />
-                                    <point x="1" y="0.5" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0.5" y="0.5" />
-                                    <point x="0" y="0.5" />
-                                </collision-poly>
-                            </frame>
+                        <animation framecount="3" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="225786190352720" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_animation\glider_left.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_animation\glider_idle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_animation\glider_right.png" />
+                        </animation>
+                        <animation framecount="4" loop="0" name="startup" pingpong="0" repeatcount="1" repeatto="0" sid="327943662092649" speed="32">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_startup\glider_startup1.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_startup\glider_startup2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_startup\glider_startup3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\glider\glider_startup\glider_startup4.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -497,18 +461,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\gath\Documents\GitHub\onebitgame\Assests\goldenpointgrid.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="one" sid="674924248277805">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="one2" sid="269953016812473">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="one3" sid="467217989865733">
-            <plugin id="TiledBg" />
-            <texture />
         </object-type>
     </object-folder>
     <families />
